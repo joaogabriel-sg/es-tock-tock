@@ -1,0 +1,130 @@
+#register-products-page .container {
+  max-width: 70rem;
+}
+
+.register-products-form {
+  width: 100%;
+  max-width: 35rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group + .form-group {
+  margin-top: 1.6rem;
+}
+
+.form-group label {
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+}
+
+.form-group input,
+.form-group button {
+  padding: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  outline: none;
+}
+
+.form-group input {
+  height: 3.5rem;
+  border: 1px solid #dcdde1;
+  font-size: 1.4rem;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+  border-color: #44bd32;
+}
+
+.form-group input.valid {
+  border-color: #44bd32;
+}
+
+.form-group button {
+  background: #44bd32;
+  font-size: 1.6rem;
+  color: #ffffff;
+  cursor: pointer;
+  letter-spacing: 0.1rem;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.form-group button:hover {
+  background: #4cd137;
+}
+
+.form-group button:active {
+  transform: scale(0.95);
+}
+
+.error-message {
+  font-size: 1.2rem;
+  color: #c23616;
+}
+
+.products-view {
+  position: absolute;
+  top: 3.2rem;
+  right: 3.2rem;
+  text-align: center;
+}
+
+.products-view i {
+  transform: translateX(0);
+  font-size: 3rem;
+}
+
+.products-view:hover i {
+  animation: cart-animation 1s infinite linear;
+}
+
+@keyframes cart-animation {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-1rem);
+  }
+  75% {
+    transform: translateX(1rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.products-view p,
+.products-view span {
+  font-size: 1.4rem;
+}
+
+.products-view p {
+  margin-top: 1rem;
+}
+
+@media (max-width: 700px) {
+  #register-products-page .header {
+    order: 1;
+  }
+
+  #register-products-page .main {
+    order: 3;
+  }
+
+  #register-products-page .products-view {
+    position: relative;
+    top: initial;
+    right: initial;
+    order: 2;
+    margin-top: 3.2rem;
+  }
+}

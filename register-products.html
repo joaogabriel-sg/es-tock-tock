@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="João Gabriel Silva Gomes">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Es tock tock | Cadastrar produtos</title>
+  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div id="register-products-page">
+    <div class="container">
+      <header class="header">
+        <img src="./images/logo.svg" alt="Es tock tock" class="logo">
+      </header>
+      
+      <main class="main">
+        <h1>Cadastro de Produtos</h1>
+
+        <form class="register-products-form">
+          <div class="form-group">
+            <label for="product-name">Nome</label>
+            <input type="text" name="product-name" id="product-name" placeholder="Ex.: Camiseta Gucci" data-required>
+          </div>
+
+          <div class="form-group">
+            <label for="product-code">Código</label>
+            <input type="text" name="product-code" id="product-code" placeholder="Ex.: CG01" data-required>
+          </div>
+
+          <div class="form-group">
+            <label for="product-quantity">Quantidade</label>
+            <input type="number" name="product-quantity" id="product-quantity" placeholder="Ex.: 10" data-required data-min-quantity>
+          </div>
+
+          <div class="form-group">
+            <label for="product-image">Imagem</label>
+            <input type="text" name="product-image" id="product-image" placeholder="https://..." data-image-url>
+          </div>
+
+          <div class="form-group">
+            <button type="submit" class="btn-submit">Cadastrar!</button>
+          </div>
+        </form>
+      </main>
+
+      <a href="./index.html" class="products-view">
+        <i class="fas fa-shopping-cart"></i>
+        <p>Itens no estoque: <span class="items-in-stock">0</span></p>
+      </a>
+    </div>
+  </div>
+
+  <script type="module" src="./js/register-product.js"></script>
+</body>
+</html>
